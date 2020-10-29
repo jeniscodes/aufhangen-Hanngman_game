@@ -1,0 +1,42 @@
+html,body,table,tr,td
+{
+    background-color: #644c74;
+    color:#facd61;
+    font-family: 'Henny Penny', cursive, 'san-serif';
+}
+
+.modal-content
+{
+    background-color: rgb(167, 142, 184);
+}
+
+#wordSpotlight
+{
+    font-size: 1.5rem;
+}
+
+#reset
+{
+    display :none;
+}
+
+.game
+{
+
+    transform: translateX(-50px);
+    opacity:0;
+
+}
+
+.gameon
+{
+
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 0.85s ease-in-out;
+}
+
+.title:hover
+{
+    cursor:pointer;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
+
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<link href="/static/styles.css" rel="stylesheet">
+  <title> Aufhängen</title>
+</head>
+<body>
+   <h2 class="text-center mt-3 title"  onclick="window.location.href='/'">Aufhängen</h2>
+   <div classs="container main" id="main">
+    <div class="text-center">
+   <img  src="static/images/6.jpg" alt="">
+   <br>
+   <button class=" play btn btn-dark" id="play"> Play </button>
+   <br>
+   <br>
+
+   <button class="btn btn-dark" onclick="window.location.href='/score'"> Leaderboard</button>
+
+ <br>
+
+   <h3 class="text-center mt-5 title"> "Aufhängen" A CS50x project by Jenish Thapa from Hetauda,Nepal. </h3>
+
+
+</div>
+
+   </div>
+<div class="container game" id="game">
+
+  <span>  Score : <span id= "score"> 0 </span>
+  <span class="float-right"> Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></span></span>
+
+  <div class="text-center">
+    <img id='hangmanPic' src="static/images/0.jpg" alt="">
+    <p>Guess the German Word:</p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <br>
+  <div id="hint"> </div>
+  <br>
+    <div id="keyboard"></div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form action="/submit" method="post">
+        <div class="form-group">
+             <label> Score </label>
+            <input class="form-control" type="text" placeholder="Readonly input here…"  readonly id="finalscore">
+            <input type="hidden" name="score" id="hidfield" />
+
+            <label> Name </label>
+            <input autocomplete="off" autofocus class="form-control" id="name" name="name" placeholder="Name" type="text">
+        </div>
+
+
+        <button type="submit" id="submit" class="btn btn-dark"> Submit </button>
+    </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src='/static/hangman.js'></script>
+</body>
+</html>
