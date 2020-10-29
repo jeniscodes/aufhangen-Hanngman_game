@@ -65,7 +65,7 @@ def submit():
 @app.route("/score")
 def score():
 
-    rows = db.execute(" SELECT * FROM score ORDER BY Score desc")
+    rows = db.execute(" SELECT * FROM score ORDER BY Score desc LIMIT 10")
 
     return render_template("score.html", rows = rows)
 
