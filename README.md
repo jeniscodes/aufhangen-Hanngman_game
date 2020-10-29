@@ -2,7 +2,8 @@ Aufhängen is a hangman game to learn German from English. You are provided a en
 The game is over if you make six errors in guessing a word. The score is added +1 with every right word guessed and you can submit your final score in the
 leaderboard when the game is over or you can just restart and play again.
 
-Check the live site in https://aufhangen.herokuapp.com/  
+**Check the live site in
+https://aufhangen.herokuapp.com/  
 
 SQL database is use to store the score submitted in a leaderboard table. The same database has a table of about 1000 german words and their translation which was scrapped from
 https://1000mostcommonwords.com/1000-most-common-german-words/ as csv and imported to the table.
